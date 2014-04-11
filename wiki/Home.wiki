@@ -1,0 +1,18 @@
+EVE Corp manager needs a snappier title
+
+= Introduction =
+
+Hello!
+
+If you have found your way here hopefully you were looking for a corp management app for the MMO EVE Online. It is currently not at all ready since I am still getting the structure in place but I have posted it for the small group of people that are going to be working on it.
+
+
+= Details =
+
+This project is written in C# in Visual Studio 2012 targeting the .net framework 4. 
+
+Using the EveAI library located at: http://wiki.eve-id.net/EveAI
+
+Details for EVE API calls at https://code.google.com/p/eve-corp-manager/wiki/APIhowto
+
+*UPDATE - 8/21/13  The source is not ready as of yet due to it containing static data*
