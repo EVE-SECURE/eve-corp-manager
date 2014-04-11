@@ -5,7 +5,7 @@ using System.Text;
 using System.Diagnostics;
 using System.IO;
 
-namespace EVE_corp_manager_V2.Common.onload
+namespace ECM.Common.onload
 {
     class onload
     {

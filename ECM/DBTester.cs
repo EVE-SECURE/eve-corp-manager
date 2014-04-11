@@ -12,7 +12,7 @@ using EveAI.Live.Corporation;
 using EveAI.Live.Character;
 using EveAI.Live;
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     public partial class DBTester : Form
     {

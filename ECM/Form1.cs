@@ -15,7 +15,7 @@ using EveAI.Live.Corporation;
 using EveAI.Live.Character;
 using EveAI.Live;
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     public partial class Form1 : Form
     {
@@ -121,6 +121,11 @@ namespace EVE_corp_manager_V2
         {
             DBTester db = new DBTester();
             db.Show();
+        }
+        private void jobsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IndyJobs IJ = new IndyJobs();
+            IJ.Show();
         }
 
        
@@ -654,6 +659,10 @@ namespace EVE_corp_manager_V2
         }
             
         #endregion
+
+        
+
+        
 
       
 

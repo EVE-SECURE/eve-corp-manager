@@ -6,7 +6,7 @@ using System.Data.SQLite;
 using System.IO;
 using System.Windows.Forms;
 
-namespace EVE_corp_manager_V2.Common.Database
+namespace ECM.Common.Database
 {
     class dbconn
     {

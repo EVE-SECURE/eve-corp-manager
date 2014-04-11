@@ -10,8 +10,9 @@ using EveAI.Live.Generic;
 using EveAI.SpaceStation;
 using System.Threading;
 using System.IO;
+using System.Windows.Forms;
 
-namespace EVE_corp_manager_V2.Common.Database
+namespace ECM.Common.Database
 {
     class DBWorker
     {
@@ -137,7 +138,7 @@ namespace EVE_corp_manager_V2.Common.Database
         /// <param name="CEOId"></param>
         private void CorpMembers(int CORP_KEY, string CORP_API)
         {
-           SQLiteConnection ECMDB = new SQLiteConnection("Data Source=" + ECMDBlocation);
+            SQLiteConnection ECMDB = new SQLiteConnection("Data Source=" + ECMDBlocation);
             AuthenticationData auth = new AuthenticationData();
             auth.KeyID = CORP_KEY;
             auth.VCode = CORP_API;
@@ -153,6 +154,7 @@ namespace EVE_corp_manager_V2.Common.Database
             {
                 try
                 {
+                    
                     string Base = Convert.ToString(line.Base);
                     long BaseID = line.BaseID;
                     string BaseName = line.BaseName;
@@ -172,16 +174,19 @@ namespace EVE_corp_manager_V2.Common.Database
                     string ShipTypeName = line.ShipTypeName;
                     string Title = line.Title;
                     string UserRoles = Convert.ToString(line.UserRoles);
+
+
                     string sql = "Insert into Corp_" + CORP_USER + "_Members (Base, BaseID, BaseName, CharacterID, GrantableRoles, JoinDate, JoinDateLocalTime, LocationID, LocationName, LogoffDate, LogoffDateLocalTime, LogonDate, LogonDateLocalTime, Name, ShipType, ShipTypeID, ShipTypeName, Title, UserRoles) values ('" + Base + "', " + BaseID + ", '" + BaseName + "', " + CharacterID + ", '" + GrantableRoles + "','" + JoinDate + "', '" + JoinDateLocalTime + "', " + LocationID + ", '" + LocationName + "', '" + LogoffDate + "', '" + LogoffDateLocalTime + "', '" + LogonDate + "', '" + LogonDateLocalTime + "', '" + Name + "', '" + ShipType + "', " + ShipTypeID + ", '" + ShipTypeName + "', '" + Title + "', '" + UserRoles + "')";
-                    //string sql = "Insert into Corp_" + CORP_USER + "_Members (BaseID, CharacterID, Name, JoinDate, JoinDateLocalTime) values (" + BaseID + ", " + CharacterID + ", '" + Name + "', '" + JoinDate + "', '" + JoinDateLocalTime + "')";
+                    
                     string sql1 = "update Corp_" + CORP_USER + "_Members set Base = '" + Base + "', BaseID = " + BaseID + ", BaseName = '" + BaseName + "', CharacterID = " + CharacterID + ", GrantableRoles = '" + GrantableRoles + "', JoinDate = '" + JoinDate + "', JoinDateLocalTime = '" + JoinDateLocalTime +"', LocationID = " + LocationID + ", LocationName = '" + LocationName + "', LogoffDate = '" + LogoffDate + "', LogoffDateLocalTime = '" + LogoffDateLocalTime + "', LogonDate = '" + LogonDate + "', LogonDateLocaltime = '" + LogonDateLocalTime + "', Name = '" + Name + "', ShipType = '" + ShipType + "', ShipTypeID = " + ShipTypeID + ", ShipTypeName = '" + ShipTypeName + "', Title = '" + Title + "', UserRoles = '" + UserRoles + "' where CharID = "+ CharacterID;
                     SQLiteCommand cmd = new SQLiteCommand(sql, ECMDB);
-                    SQLiteCommand updateCMD = new SQLiteCommand(sql1, ECMDB);
+                    //SQLiteCommand updateCMD = new SQLiteCommand(sql1, ECMDB);
                     cmd.ExecuteNonQuery();
+                    
                 }
-                catch
+                catch (Exception ex)
                 {
-
+                    MessageBox.Show(Convert.ToString(ex));
                 }
                 ECMDB.Close();
             }
@@ -333,7 +338,16 @@ namespace EVE_corp_manager_V2.Common.Database
             }
             ECMDB.Close();
         }
-       
+
+        public void CorpIndustryJobs(int CORP_KEY, string CORP_API, int CEOId)
+        {
+            EveApi api = new EveApi(CORP_KEY, CORP_API, CEOId);
+            List<IndustryJob> jobs = api.GetCorporationIndustryJobs();
+            foreach (var job in jobs)
+            {
+                long installerID = job.InstallerID;
+            }
+        }
 
 
 

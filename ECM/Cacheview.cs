@@ -9,7 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     public partial class cacheview : Form
     {

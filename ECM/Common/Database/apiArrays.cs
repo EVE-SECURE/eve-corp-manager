@@ -8,7 +8,7 @@ using EveAI.Live.Account;
 using System.Xml;
 using System.IO;
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     class apiArrays
     {

@@ -8,7 +8,7 @@ using EveAI.Live.Character;
 using EveAI.Live;
 using EveAI.Live.Generic;
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     class EVECM_common
     {

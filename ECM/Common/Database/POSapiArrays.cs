@@ -7,7 +7,7 @@ using EveAI.Live.Corporation;
 using EveAI.SpaceStation;
 using EveAI.Planetary;
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     class POSapiArrays
     {

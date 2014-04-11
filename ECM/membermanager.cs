@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     public partial class membermanager : Form
     {

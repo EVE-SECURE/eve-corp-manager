@@ -1,4 +1,4 @@
-﻿namespace EVE_corp_manager_V2
+﻿namespace ECM
 {
     partial class DBTester
     {

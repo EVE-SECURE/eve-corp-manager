@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>EVE_corp_manager_V2.Program</StartupObject>
+    <StartupObject>ECM.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EveAI.Core">
@@ -130,6 +130,12 @@
     <Compile Include="importcharacters.Designer.cs">
       <DependentUpon>importcharacters.cs</DependentUpon>
     </Compile>
+    <Compile Include="Industry\IndyJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Industry\IndyJobs.Designer.cs">
+      <DependentUpon>IndyJobs.cs</DependentUpon>
+    </Compile>
     <Compile Include="membermanager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="importcharacters.resx">
       <DependentUpon>importcharacters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Industry\IndyJobs.resx">
+      <DependentUpon>IndyJobs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="membermanager.resx">
       <DependentUpon>membermanager.cs</DependentUpon>
@@ -223,10 +232,8 @@
     <EmbeddedResource Include="Resources\600px-persian-kitten-in-teacup.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Common\Controls\" />
+    <Folder Include="Market\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     static class Program
     {

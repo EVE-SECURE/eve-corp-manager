@@ -7,7 +7,7 @@ using EveAI.Live.Corporation;
 using EveAI.Live.Character;
 using System.Data.SQLite;
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     class CorpWalletapiArray
     {

@@ -17,7 +17,7 @@ using System.Text.RegularExpressions;
 using EveAI.Live.Corporation;
 
 
-namespace EVE_corp_manager_V2
+namespace ECM
 {
     public partial class API_KEY_mgmt : Form
     {
