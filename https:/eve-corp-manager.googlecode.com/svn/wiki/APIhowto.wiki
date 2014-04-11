@@ -1,0 +1,77 @@
+Essentially a how-to
+
+= Introduction to EveAI =
+
+EveAI is a dunno-source, using the MIT license, library written by an EVE Online player that provides standardized methods for accessing the EVE Online API.
+
+
+= Character Examples =
+
+For a character these fields are used:
+
+keyID = The Key for the account
+
+keyID=940653
+
+vCode = Verification code for the keyID
+
+vCode=0R3vi2JzPYjiDSmnxtjivFhaEfn0N2LflEYGZ6t2jAn6w1oFjBJZYRw9LxVMEZ3t
+
+characterID = Character ID from the account
+
+The URI request is structured as such:
+
+https://api.eveonline.com/char/CharacterSheet.xml.aspx?keyID=940653&vCode=0R3vi2JzPYjiDSmnxtjivFhaEfn0N2LflEYGZ6t2jAn6w1oFjBJZYRw9LxVMEZ3t&characterID=90981690
+
+returns
+<eveapi version="2">
+<currentTime>2013-08-09 17:04:57</currentTime>
+<result>
+<characterID>90981690</characterID>
+<name>Aleyeska Cisko</name>
+<DoB>2011-07-09 03:51:00</DoB>
+<race>Caldari</race>
+<bloodLine>Civire</bloodLine>
+<ancestry>Entrepreneurs</ancestry>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<rowset name="corporationTitles" key="titleID" columns="titleID,titleName"/>
+</result>
+<cachedUntil>2013-08-09 17:19:57</cachedUntil>
+</eveapi>
+
+= = Corporation Examples =
+
+Corp keys work in a similar fashion:
+
+https://api.eveonline.com/corp/AccountBalance.xml.aspx?keyID=2436985&vCode=0BWloK6rD8FzIxjm7YPe50Of2Kfv78C9vSu1K8o3tKI2nR06Cq1t6gHKA9KBCvCj&characterID=90981690 
+
+keyID: Corporate key
+
+keyID=2436985
+
+vCode=Corporate Verification Code
+
+vCode=0BWloK6rD8FzIxjm7YPe50Of2Kfv78C9vSu1K8o3tKI2nR06Cq1t6gHKA9KBCvCj
+
+characterID = The ID for the character( must have appropriate roles in the corp for the data being pulled)
+
+characterID=90981690
+
+
+Returns
+
+<eveapi version="2">
+<currentTime>2013-08-09 16:40:23</currentTime>
+<result>
+<rowset name="accounts" key="accountID" columns="accountID,accountKey,balance">
+<row accountID="58695843" accountKey="1000" balance="540000000.00"/>
+<row accountID="58695844" accountKey="1001" balance="0.00"/>
+<row accountID="58695845" accountKey="1002" balance="0.00"/>
+<row accountID="58695846" accountKey="1003" balance="0.00"/>
+<row accountID="58695847" accountKey="1004" balance="0.00"/>
+<row accountID="58695848" accountKey="1005" balance="0.00"/>
+<row accountID="58695849" accountKey="1006" balance="1206448931.88"/>
+</rowset>
+</result>
+<cachedUntil>2013-08-09 16:55:23</cachedUntil>
+</eveapi>
