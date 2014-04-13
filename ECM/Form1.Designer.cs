@@ -29,65 +29,65 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Control Towers");
-            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("POS", new System.Windows.Forms.TreeNode[] {
-            treeNode38});
-            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Assembly Arrays");
-            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Hangar Arrays");
-            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Node4");
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("DPS");
-            System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Logi");
-            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("Command");
-            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Doctrine 1", new System.Windows.Forms.TreeNode[] {
-            treeNode43,
-            treeNode44,
-            treeNode45});
-            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Squad 1");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Squad 2");
-            System.Windows.Forms.TreeNode treeNode49 = new System.Windows.Forms.TreeNode("Squad 3");
-            System.Windows.Forms.TreeNode treeNode50 = new System.Windows.Forms.TreeNode("Squad 4");
-            System.Windows.Forms.TreeNode treeNode51 = new System.Windows.Forms.TreeNode("Squad 5");
-            System.Windows.Forms.TreeNode treeNode52 = new System.Windows.Forms.TreeNode("Wing 1", new System.Windows.Forms.TreeNode[] {
-            treeNode47,
-            treeNode48,
-            treeNode49,
-            treeNode50,
-            treeNode51});
-            System.Windows.Forms.TreeNode treeNode53 = new System.Windows.Forms.TreeNode("Wing 2");
-            System.Windows.Forms.TreeNode treeNode54 = new System.Windows.Forms.TreeNode("wing 3");
-            System.Windows.Forms.TreeNode treeNode55 = new System.Windows.Forms.TreeNode("Wing 4");
-            System.Windows.Forms.TreeNode treeNode56 = new System.Windows.Forms.TreeNode("wing 5");
-            System.Windows.Forms.TreeNode treeNode57 = new System.Windows.Forms.TreeNode("Doctrine 2", new System.Windows.Forms.TreeNode[] {
-            treeNode52,
-            treeNode53,
-            treeNode54,
-            treeNode55,
-            treeNode56});
-            System.Windows.Forms.TreeNode treeNode58 = new System.Windows.Forms.TreeNode("Amarr");
-            System.Windows.Forms.TreeNode treeNode59 = new System.Windows.Forms.TreeNode("Caldari");
-            System.Windows.Forms.TreeNode treeNode60 = new System.Windows.Forms.TreeNode("Gallente");
-            System.Windows.Forms.TreeNode treeNode61 = new System.Windows.Forms.TreeNode("Minmatar");
-            System.Windows.Forms.TreeNode treeNode62 = new System.Windows.Forms.TreeNode("Command ships", new System.Windows.Forms.TreeNode[] {
-            treeNode58,
-            treeNode59,
-            treeNode60,
-            treeNode61});
-            System.Windows.Forms.TreeNode treeNode63 = new System.Windows.Forms.TreeNode("Advanced BC\'s", new System.Windows.Forms.TreeNode[] {
-            treeNode62});
-            System.Windows.Forms.TreeNode treeNode64 = new System.Windows.Forms.TreeNode("Faction BC\'s");
-            System.Windows.Forms.TreeNode treeNode65 = new System.Windows.Forms.TreeNode("Standard BC\'s");
-            System.Windows.Forms.TreeNode treeNode66 = new System.Windows.Forms.TreeNode("Battlecruisers", new System.Windows.Forms.TreeNode[] {
-            treeNode63,
-            treeNode64,
-            treeNode65});
-            System.Windows.Forms.TreeNode treeNode67 = new System.Windows.Forms.TreeNode("Battleships");
-            System.Windows.Forms.TreeNode treeNode68 = new System.Windows.Forms.TreeNode("Capital Ships");
-            System.Windows.Forms.TreeNode treeNode69 = new System.Windows.Forms.TreeNode("Cruisers");
-            System.Windows.Forms.TreeNode treeNode70 = new System.Windows.Forms.TreeNode("Destroyers");
-            System.Windows.Forms.TreeNode treeNode71 = new System.Windows.Forms.TreeNode("Frigates");
-            System.Windows.Forms.TreeNode treeNode72 = new System.Windows.Forms.TreeNode("Industrial Ships");
-            System.Windows.Forms.TreeNode treeNode73 = new System.Windows.Forms.TreeNode("Mining Barges");
-            System.Windows.Forms.TreeNode treeNode74 = new System.Windows.Forms.TreeNode("Special Edition Ships");
+            System.Windows.Forms.TreeNode treeNode149 = new System.Windows.Forms.TreeNode("Control Towers");
+            System.Windows.Forms.TreeNode treeNode150 = new System.Windows.Forms.TreeNode("POS", new System.Windows.Forms.TreeNode[] {
+            treeNode149});
+            System.Windows.Forms.TreeNode treeNode151 = new System.Windows.Forms.TreeNode("Assembly Arrays");
+            System.Windows.Forms.TreeNode treeNode152 = new System.Windows.Forms.TreeNode("Hangar Arrays");
+            System.Windows.Forms.TreeNode treeNode153 = new System.Windows.Forms.TreeNode("Node4");
+            System.Windows.Forms.TreeNode treeNode154 = new System.Windows.Forms.TreeNode("DPS");
+            System.Windows.Forms.TreeNode treeNode155 = new System.Windows.Forms.TreeNode("Logi");
+            System.Windows.Forms.TreeNode treeNode156 = new System.Windows.Forms.TreeNode("Command");
+            System.Windows.Forms.TreeNode treeNode157 = new System.Windows.Forms.TreeNode("Doctrine 1", new System.Windows.Forms.TreeNode[] {
+            treeNode154,
+            treeNode155,
+            treeNode156});
+            System.Windows.Forms.TreeNode treeNode158 = new System.Windows.Forms.TreeNode("Squad 1");
+            System.Windows.Forms.TreeNode treeNode159 = new System.Windows.Forms.TreeNode("Squad 2");
+            System.Windows.Forms.TreeNode treeNode160 = new System.Windows.Forms.TreeNode("Squad 3");
+            System.Windows.Forms.TreeNode treeNode161 = new System.Windows.Forms.TreeNode("Squad 4");
+            System.Windows.Forms.TreeNode treeNode162 = new System.Windows.Forms.TreeNode("Squad 5");
+            System.Windows.Forms.TreeNode treeNode163 = new System.Windows.Forms.TreeNode("Wing 1", new System.Windows.Forms.TreeNode[] {
+            treeNode158,
+            treeNode159,
+            treeNode160,
+            treeNode161,
+            treeNode162});
+            System.Windows.Forms.TreeNode treeNode164 = new System.Windows.Forms.TreeNode("Wing 2");
+            System.Windows.Forms.TreeNode treeNode165 = new System.Windows.Forms.TreeNode("wing 3");
+            System.Windows.Forms.TreeNode treeNode166 = new System.Windows.Forms.TreeNode("Wing 4");
+            System.Windows.Forms.TreeNode treeNode167 = new System.Windows.Forms.TreeNode("wing 5");
+            System.Windows.Forms.TreeNode treeNode168 = new System.Windows.Forms.TreeNode("Doctrine 2", new System.Windows.Forms.TreeNode[] {
+            treeNode163,
+            treeNode164,
+            treeNode165,
+            treeNode166,
+            treeNode167});
+            System.Windows.Forms.TreeNode treeNode169 = new System.Windows.Forms.TreeNode("Amarr");
+            System.Windows.Forms.TreeNode treeNode170 = new System.Windows.Forms.TreeNode("Caldari");
+            System.Windows.Forms.TreeNode treeNode171 = new System.Windows.Forms.TreeNode("Gallente");
+            System.Windows.Forms.TreeNode treeNode172 = new System.Windows.Forms.TreeNode("Minmatar");
+            System.Windows.Forms.TreeNode treeNode173 = new System.Windows.Forms.TreeNode("Command ships", new System.Windows.Forms.TreeNode[] {
+            treeNode169,
+            treeNode170,
+            treeNode171,
+            treeNode172});
+            System.Windows.Forms.TreeNode treeNode174 = new System.Windows.Forms.TreeNode("Advanced BC\'s", new System.Windows.Forms.TreeNode[] {
+            treeNode173});
+            System.Windows.Forms.TreeNode treeNode175 = new System.Windows.Forms.TreeNode("Faction BC\'s");
+            System.Windows.Forms.TreeNode treeNode176 = new System.Windows.Forms.TreeNode("Standard BC\'s");
+            System.Windows.Forms.TreeNode treeNode177 = new System.Windows.Forms.TreeNode("Battlecruisers", new System.Windows.Forms.TreeNode[] {
+            treeNode174,
+            treeNode175,
+            treeNode176});
+            System.Windows.Forms.TreeNode treeNode178 = new System.Windows.Forms.TreeNode("Battleships");
+            System.Windows.Forms.TreeNode treeNode179 = new System.Windows.Forms.TreeNode("Capital Ships");
+            System.Windows.Forms.TreeNode treeNode180 = new System.Windows.Forms.TreeNode("Cruisers");
+            System.Windows.Forms.TreeNode treeNode181 = new System.Windows.Forms.TreeNode("Destroyers");
+            System.Windows.Forms.TreeNode treeNode182 = new System.Windows.Forms.TreeNode("Frigates");
+            System.Windows.Forms.TreeNode treeNode183 = new System.Windows.Forms.TreeNode("Industrial Ships");
+            System.Windows.Forms.TreeNode treeNode184 = new System.Windows.Forms.TreeNode("Mining Barges");
+            System.Windows.Forms.TreeNode treeNode185 = new System.Windows.Forms.TreeNode("Special Edition Ships");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,7 +99,10 @@
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corpAssetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marketOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contractsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.industryJobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -197,9 +200,12 @@
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label8 = new System.Windows.Forms.Label();
-            this.jobsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contractsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabPage9.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -289,7 +295,7 @@
             // corpAssetsToolStripMenuItem
             // 
             this.corpAssetsToolStripMenuItem.Name = "corpAssetsToolStripMenuItem";
-            this.corpAssetsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.corpAssetsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.corpAssetsToolStripMenuItem.Text = "Corp Assets";
             // 
             // marketOrdersToolStripMenuItem
@@ -298,16 +304,35 @@
             this.ordersToolStripMenuItem,
             this.contractsToolStripMenuItem});
             this.marketOrdersToolStripMenuItem.Name = "marketOrdersToolStripMenuItem";
-            this.marketOrdersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.marketOrdersToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.marketOrdersToolStripMenuItem.Text = "Market";
+            // 
+            // ordersToolStripMenuItem
+            // 
+            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
+            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.ordersToolStripMenuItem.Text = "Orders";
+            // 
+            // contractsToolStripMenuItem
+            // 
+            this.contractsToolStripMenuItem.Name = "contractsToolStripMenuItem";
+            this.contractsToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.contractsToolStripMenuItem.Text = "Contracts";
             // 
             // industryJobsToolStripMenuItem
             // 
             this.industryJobsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jobsToolStripMenuItem});
             this.industryJobsToolStripMenuItem.Name = "industryJobsToolStripMenuItem";
-            this.industryJobsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.industryJobsToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.industryJobsToolStripMenuItem.Text = "Industry";
+            // 
+            // jobsToolStripMenuItem
+            // 
+            this.jobsToolStripMenuItem.Name = "jobsToolStripMenuItem";
+            this.jobsToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.jobsToolStripMenuItem.Text = "Jobs";
+            this.jobsToolStripMenuItem.Click += new System.EventHandler(this.jobsToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
@@ -564,21 +589,21 @@
             // 
             this.treeView5.Location = new System.Drawing.Point(6, 19);
             this.treeView5.Name = "treeView5";
-            treeNode38.Name = "Node1";
-            treeNode38.Text = "Control Towers";
-            treeNode39.Name = "Node0";
-            treeNode39.Text = "POS";
-            treeNode40.Name = "Node3";
-            treeNode40.Text = "Assembly Arrays";
-            treeNode41.Name = "Node2";
-            treeNode41.Text = "Hangar Arrays";
-            treeNode42.Name = "Node4";
-            treeNode42.Text = "Node4";
+            treeNode149.Name = "Node1";
+            treeNode149.Text = "Control Towers";
+            treeNode150.Name = "Node0";
+            treeNode150.Text = "POS";
+            treeNode151.Name = "Node3";
+            treeNode151.Text = "Assembly Arrays";
+            treeNode152.Name = "Node2";
+            treeNode152.Text = "Hangar Arrays";
+            treeNode153.Name = "Node4";
+            treeNode153.Text = "Node4";
             this.treeView5.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode39,
-            treeNode40,
-            treeNode41,
-            treeNode42});
+            treeNode150,
+            treeNode151,
+            treeNode152,
+            treeNode153});
             this.treeView5.Size = new System.Drawing.Size(121, 207);
             this.treeView5.TabIndex = 12;
             // 
@@ -739,6 +764,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label43);
+            this.groupBox2.Controls.Add(this.label42);
+            this.groupBox2.Controls.Add(this.label41);
+            this.groupBox2.Controls.Add(this.label33);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label32);
             this.groupBox2.Controls.Add(this.label35);
             this.groupBox2.Controls.Add(this.label36);
             this.groupBox2.Controls.Add(this.label37);
@@ -1093,39 +1124,39 @@
             // 
             this.treeView3.Location = new System.Drawing.Point(834, 212);
             this.treeView3.Name = "treeView3";
-            treeNode43.Name = "Node2";
-            treeNode43.Text = "DPS";
-            treeNode44.Name = "Node4";
-            treeNode44.Text = "Logi";
-            treeNode45.Name = "Node5";
-            treeNode45.Text = "Command";
-            treeNode46.Name = "Node0";
-            treeNode46.Text = "Doctrine 1";
-            treeNode47.Name = "Node16";
-            treeNode47.Text = "Squad 1";
-            treeNode48.Name = "Node17";
-            treeNode48.Text = "Squad 2";
-            treeNode49.Name = "Node18";
-            treeNode49.Text = "Squad 3";
-            treeNode50.Name = "Node19";
-            treeNode50.Text = "Squad 4";
-            treeNode51.Name = "Node20";
-            treeNode51.Text = "Squad 5";
-            treeNode52.Name = "Node11";
-            treeNode52.Text = "Wing 1";
-            treeNode53.Name = "Node12";
-            treeNode53.Text = "Wing 2";
-            treeNode54.Name = "Node13";
-            treeNode54.Text = "wing 3";
-            treeNode55.Name = "Node14";
-            treeNode55.Text = "Wing 4";
-            treeNode56.Name = "Node15";
-            treeNode56.Text = "wing 5";
-            treeNode57.Name = "Node1";
-            treeNode57.Text = "Doctrine 2";
+            treeNode154.Name = "Node2";
+            treeNode154.Text = "DPS";
+            treeNode155.Name = "Node4";
+            treeNode155.Text = "Logi";
+            treeNode156.Name = "Node5";
+            treeNode156.Text = "Command";
+            treeNode157.Name = "Node0";
+            treeNode157.Text = "Doctrine 1";
+            treeNode158.Name = "Node16";
+            treeNode158.Text = "Squad 1";
+            treeNode159.Name = "Node17";
+            treeNode159.Text = "Squad 2";
+            treeNode160.Name = "Node18";
+            treeNode160.Text = "Squad 3";
+            treeNode161.Name = "Node19";
+            treeNode161.Text = "Squad 4";
+            treeNode162.Name = "Node20";
+            treeNode162.Text = "Squad 5";
+            treeNode163.Name = "Node11";
+            treeNode163.Text = "Wing 1";
+            treeNode164.Name = "Node12";
+            treeNode164.Text = "Wing 2";
+            treeNode165.Name = "Node13";
+            treeNode165.Text = "wing 3";
+            treeNode166.Name = "Node14";
+            treeNode166.Text = "Wing 4";
+            treeNode167.Name = "Node15";
+            treeNode167.Text = "wing 5";
+            treeNode168.Name = "Node1";
+            treeNode168.Text = "Doctrine 2";
             this.treeView3.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode46,
-            treeNode57});
+            treeNode157,
+            treeNode168});
             this.treeView3.Size = new System.Drawing.Size(344, 264);
             this.treeView3.TabIndex = 23;
             // 
@@ -1160,50 +1191,50 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(632, 214);
             this.treeView1.Name = "treeView1";
-            treeNode58.Name = "Node13";
-            treeNode58.Text = "Amarr";
-            treeNode59.Name = "Node14";
-            treeNode59.Text = "Caldari";
-            treeNode60.Name = "Node15";
-            treeNode60.Text = "Gallente";
-            treeNode61.Name = "Node16";
-            treeNode61.Text = "Minmatar";
-            treeNode62.Name = "Node12";
-            treeNode62.Text = "Command ships";
-            treeNode63.Name = "Node9";
-            treeNode63.Text = "Advanced BC\'s";
-            treeNode64.Name = "Node10";
-            treeNode64.Text = "Faction BC\'s";
-            treeNode65.Name = "Node11";
-            treeNode65.Text = "Standard BC\'s";
-            treeNode66.Name = "Node0";
-            treeNode66.Text = "Battlecruisers";
-            treeNode67.Name = "Node1";
-            treeNode67.Text = "Battleships";
-            treeNode68.Name = "Node2";
-            treeNode68.Text = "Capital Ships";
-            treeNode69.Name = "Node3";
-            treeNode69.Text = "Cruisers";
-            treeNode70.Name = "Node4";
-            treeNode70.Text = "Destroyers";
-            treeNode71.Name = "Node5";
-            treeNode71.Text = "Frigates";
-            treeNode72.Name = "Node6";
-            treeNode72.Text = "Industrial Ships";
-            treeNode73.Name = "Node7";
-            treeNode73.Text = "Mining Barges";
-            treeNode74.Name = "Node8";
-            treeNode74.Text = "Special Edition Ships";
+            treeNode169.Name = "Node13";
+            treeNode169.Text = "Amarr";
+            treeNode170.Name = "Node14";
+            treeNode170.Text = "Caldari";
+            treeNode171.Name = "Node15";
+            treeNode171.Text = "Gallente";
+            treeNode172.Name = "Node16";
+            treeNode172.Text = "Minmatar";
+            treeNode173.Name = "Node12";
+            treeNode173.Text = "Command ships";
+            treeNode174.Name = "Node9";
+            treeNode174.Text = "Advanced BC\'s";
+            treeNode175.Name = "Node10";
+            treeNode175.Text = "Faction BC\'s";
+            treeNode176.Name = "Node11";
+            treeNode176.Text = "Standard BC\'s";
+            treeNode177.Name = "Node0";
+            treeNode177.Text = "Battlecruisers";
+            treeNode178.Name = "Node1";
+            treeNode178.Text = "Battleships";
+            treeNode179.Name = "Node2";
+            treeNode179.Text = "Capital Ships";
+            treeNode180.Name = "Node3";
+            treeNode180.Text = "Cruisers";
+            treeNode181.Name = "Node4";
+            treeNode181.Text = "Destroyers";
+            treeNode182.Name = "Node5";
+            treeNode182.Text = "Frigates";
+            treeNode183.Name = "Node6";
+            treeNode183.Text = "Industrial Ships";
+            treeNode184.Name = "Node7";
+            treeNode184.Text = "Mining Barges";
+            treeNode185.Name = "Node8";
+            treeNode185.Text = "Special Edition Ships";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode66,
-            treeNode67,
-            treeNode68,
-            treeNode69,
-            treeNode70,
-            treeNode71,
-            treeNode72,
-            treeNode73,
-            treeNode74});
+            treeNode177,
+            treeNode178,
+            treeNode179,
+            treeNode180,
+            treeNode181,
+            treeNode182,
+            treeNode183,
+            treeNode184,
+            treeNode185});
             this.treeView1.Size = new System.Drawing.Size(196, 262);
             this.treeView1.TabIndex = 14;
             // 
@@ -1360,24 +1391,59 @@
             this.label8.TabIndex = 36;
             this.label8.Text = "^\r\n^\r\n^\r\nGo here to add your Characters and Corporation Keys.";
             // 
-            // jobsToolStripMenuItem
+            // label18
             // 
-            this.jobsToolStripMenuItem.Name = "jobsToolStripMenuItem";
-            this.jobsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.jobsToolStripMenuItem.Text = "Jobs";
-            this.jobsToolStripMenuItem.Click += new System.EventHandler(this.jobsToolStripMenuItem_Click);
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(282, 38);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "label18";
             // 
-            // ordersToolStripMenuItem
+            // label32
             // 
-            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
-            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.ordersToolStripMenuItem.Text = "Orders";
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(282, 17);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(41, 13);
+            this.label32.TabIndex = 23;
+            this.label32.Text = "label32";
             // 
-            // contractsToolStripMenuItem
+            // label33
             // 
-            this.contractsToolStripMenuItem.Name = "contractsToolStripMenuItem";
-            this.contractsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.contractsToolStripMenuItem.Text = "Contracts";
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(24, 153);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(41, 13);
+            this.label33.TabIndex = 24;
+            this.label33.Text = "label33";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(282, 61);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(41, 13);
+            this.label41.TabIndex = 25;
+            this.label41.Text = "label41";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(282, 84);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(41, 13);
+            this.label42.TabIndex = 26;
+            this.label42.Text = "label42";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(282, 107);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(41, 13);
+            this.label43.TabIndex = 27;
+            this.label43.Text = "label43";
             // 
             // Form1
             // 
@@ -1541,6 +1607,12 @@
         private System.Windows.Forms.ToolStripMenuItem ordersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem contractsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jobsToolStripMenuItem;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label32;
     }
 }
 

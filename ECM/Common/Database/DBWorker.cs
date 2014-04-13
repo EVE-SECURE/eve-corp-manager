@@ -143,6 +143,7 @@ namespace ECM.Common.Database
             auth.KeyID = CORP_KEY;
             auth.VCode = CORP_API;
             auth.TrackingExtended = true;
+            
 
             MemberTrackingApi api = new MemberTrackingApi();
             api.AuthenticationData = auth;
@@ -178,15 +179,15 @@ namespace ECM.Common.Database
 
                     string sql = "Insert into Corp_" + CORP_USER + "_Members (Base, BaseID, BaseName, CharacterID, GrantableRoles, JoinDate, JoinDateLocalTime, LocationID, LocationName, LogoffDate, LogoffDateLocalTime, LogonDate, LogonDateLocalTime, Name, ShipType, ShipTypeID, ShipTypeName, Title, UserRoles) values ('" + Base + "', " + BaseID + ", '" + BaseName + "', " + CharacterID + ", '" + GrantableRoles + "','" + JoinDate + "', '" + JoinDateLocalTime + "', " + LocationID + ", '" + LocationName + "', '" + LogoffDate + "', '" + LogoffDateLocalTime + "', '" + LogonDate + "', '" + LogonDateLocalTime + "', '" + Name + "', '" + ShipType + "', " + ShipTypeID + ", '" + ShipTypeName + "', '" + Title + "', '" + UserRoles + "')";
                     
-                    string sql1 = "update Corp_" + CORP_USER + "_Members set Base = '" + Base + "', BaseID = " + BaseID + ", BaseName = '" + BaseName + "', CharacterID = " + CharacterID + ", GrantableRoles = '" + GrantableRoles + "', JoinDate = '" + JoinDate + "', JoinDateLocalTime = '" + JoinDateLocalTime +"', LocationID = " + LocationID + ", LocationName = '" + LocationName + "', LogoffDate = '" + LogoffDate + "', LogoffDateLocalTime = '" + LogoffDateLocalTime + "', LogonDate = '" + LogonDate + "', LogonDateLocaltime = '" + LogonDateLocalTime + "', Name = '" + Name + "', ShipType = '" + ShipType + "', ShipTypeID = " + ShipTypeID + ", ShipTypeName = '" + ShipTypeName + "', Title = '" + Title + "', UserRoles = '" + UserRoles + "' where CharID = "+ CharacterID;
+                    //string sql1 = "update Corp_" + CORP_USER + "_Members set Base = '" + Base + "', BaseID = " + BaseID + ", BaseName = '" + BaseName + "', CharacterID = " + CharacterID + ", GrantableRoles = '" + GrantableRoles + "', JoinDate = '" + JoinDate + "', JoinDateLocalTime = '" + JoinDateLocalTime +"', LocationID = " + LocationID + ", LocationName = '" + LocationName + "', LogoffDate = '" + LogoffDate + "', LogoffDateLocalTime = '" + LogoffDateLocalTime + "', LogonDate = '" + LogonDate + "', LogonDateLocaltime = '" + LogonDateLocalTime + "', Name = '" + Name + "', ShipType = '" + ShipType + "', ShipTypeID = " + ShipTypeID + ", ShipTypeName = '" + ShipTypeName + "', Title = '" + Title + "', UserRoles = '" + UserRoles + "' where CharID = "+ CharacterID;
                     SQLiteCommand cmd = new SQLiteCommand(sql, ECMDB);
                     //SQLiteCommand updateCMD = new SQLiteCommand(sql1, ECMDB);
                     cmd.ExecuteNonQuery();
                     
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(Convert.ToString(ex));
+                    //MessageBox.Show(Convert.ToString(ex));
                 }
                 ECMDB.Close();
             }
@@ -473,6 +474,33 @@ namespace ECM.Common.Database
             reader.Close();
             return Tuple.Create(_limit, _members);
         }
+
+        public string[] doCPN(string pickedChar)
+        {
+            string member = pickedChar;
+            string[] corpData = new string[3];
+            string sql = "SELECT CorpID from CharacterInfo Where Name like '" + member + "'";
+            SQLiteConnection ECMDB = new SQLiteConnection("Data Source=" + ECMDBlocation);
+            SQLiteCommand cmd = new SQLiteCommand(sql, ECMDB);
+            ECMDB.Open();
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                corpData[0] = Convert.ToString(reader["CorpID"]);
+            }
+            reader.Close();
+            sql = "SELECT CorpName, AllianceName From CorporationInfo Where CorpID = " + corpData[0];
+            cmd = new SQLiteCommand(sql, ECMDB);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                corpData[1] = Convert.ToString(reader["CorpName"]);
+                corpData[2] = Convert.ToString(reader["AllianceName"]);
+            }
+            reader.Close();
+            return corpData;
+        }
+
 
 
 

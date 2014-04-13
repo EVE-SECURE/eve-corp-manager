@@ -24,8 +24,6 @@ namespace ECM
         Common.Database.dbconn dbconn = new Common.Database.dbconn();
         Common.Database.DBWorker worker = new Common.Database.DBWorker();
         Common.onload.onload onload = new Common.onload.onload();
-        //string ECM_cache = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\AppData\Local\EVECM\");
-        //string ECMDBlocation = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\AppData\Local\EVECM\db\EVECM.db");
         //private string API = "0R3vi2JzPYjiDSmnxtjivFhaEfn0N2LflEYGZ6t2jAn6w1oFjBJZYRw9LxVMEZ3t";
         //private int KEY = 940653;
         //private int USER = 90981690;
@@ -222,7 +220,7 @@ namespace ECM
                 this.dataGridView1.DataSource = dt;
                 dataGridView1.Columns["Amount"].DefaultCellStyle.Format = "c";
                 dataGridView1.Columns["Balance"].DefaultCellStyle.Format = "c";
-                dataGridView1.Columns[7].HeaderCell.SortGlyphDirection = SortOrder.Descending;
+                dataGridView1.Columns[11].HeaderCell.SortGlyphDirection = SortOrder.Descending;
                 dataGridView1.Columns[0].Visible = false;
                 dataGridView1.Columns[1].Visible = false;
                 dataGridView1.Columns[2].Visible = false;
@@ -262,16 +260,22 @@ namespace ECM
                 int selectedrowindexBal = dataGridView1.SelectedCells[4].RowIndex;
                 int selectedrowindexGivingParty = dataGridView1.SelectedCells[7].RowIndex;
                 int selectedrowindexxferType = dataGridView1.SelectedCells[19].RowIndex;
+                int selectedrowindexrecvdName = dataGridView1.SelectedCells[14].RowIndex;
+                int selectedrowindexReason = dataGridView1.SelectedCells[13].RowIndex;
                 DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
                 DataGridViewRow selectedRowAMT = dataGridView1.Rows[selectedrowindexAMT];
                 DataGridViewRow selectedRowBal = dataGridView1.Rows[selectedrowindexBal];
                 DataGridViewRow selectedRowGP = dataGridView1.Rows[selectedrowindexGivingParty];
                 DataGridViewRow selectedRowXferType = dataGridView1.Rows[selectedrowindexxferType];
+                DataGridViewRow selectedRowrecvdName = dataGridView1.Rows[selectedrowindexrecvdName];
+                DataGridViewRow selectedRowReason = dataGridView1.Rows[selectedrowindexReason];
                 label36.Text = "ID: " +  Convert.ToString(selectedRow.Cells["JournalID"].Value);
                 dg1Amount = Convert.ToInt32(selectedRowAMT.Cells["Amount"].Value);
                 dg1Bal = Convert.ToInt32(selectedRowBal.Cells["Balance"].Value);
                 label39.Text = "Payor: " + Convert.ToString(selectedRowGP.Cells["GivingPartyName"].Value);
                 label35.Text = "Transfer: " + Convert.ToString(selectedRowXferType.Cells["xferType"].Value);
+                label32.Text = "Payee: " + Convert.ToString(selectedRowrecvdName.Cells["RecvdPartyName"].Value);
+                label18.Text = Convert.ToString(selectedRowReason.Cells["Reason"].Value);
             }
             groupBox2.Text = "Journal Entry Detail";
             label37.Text = "Price: " + string.Format("{0:c}", dg1Amount);
@@ -363,29 +367,33 @@ namespace ECM
         DateTime TELT;
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string ECM_cache = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\AppData\Local\EVECM\");
-            timer1.Enabled = false;
-            string selectChar = Convert.ToString(listBox1.SelectedItem).Trim();
-            string[] charData = worker.returnCharData(selectChar);
-            label3.Text = charData[1] ; //name
-            label4.Text = "Training " + charData[2] + " to level " + charData[3]; //Skill in training and skill level
-            label17.Text = charData[6]; //Clonegrade
-            label6.Text = "Total SP: " + charData[5]; //Total Skill points
-            label30.Text = charData[7] + " in a " + charData[8] + " [" + charData[9] + "]"; //Last location, shiptype, ship name
-            TrainingEndLocalTime = Convert.ToDateTime(dbconn.datetimestandard(TELT));
-            TELT = Convert.ToDateTime(charData[4]); //training end local time
-            TrainingEndLocalTime = Convert.ToDateTime(dbconn.datetimestandard(TELT));
             try
             {
-                pictureBox3.Load(ECM_cache + @"images\" + charData[0] + "_256.jpg"); //Char ID
+                string ECM_cache = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\AppData\Local\EVECM\");
+                timer1.Enabled = false;
+                string selectChar = Convert.ToString(listBox1.SelectedItem).Trim();
+                string[] charData = worker.returnCharData(selectChar);
+                label3.Text = charData[1]; //name
+                label4.Text = "Training " + charData[2] + " to level " + charData[3]; //Skill in training and skill level
+                label17.Text = charData[6]; //Clonegrade
+                label6.Text = "Total SP: " + charData[5]; //Total Skill points
+                label30.Text = charData[7] + " in a " + charData[8] + " [" + charData[9] + "]"; //Last location, shiptype, ship name
+                TrainingEndLocalTime = Convert.ToDateTime(dbconn.datetimestandard(TELT));
+                TELT = Convert.ToDateTime(charData[4]); //training end local time
+                TrainingEndLocalTime = Convert.ToDateTime(dbconn.datetimestandard(TELT));
+                try
+                {
+                    pictureBox3.Load(ECM_cache + @"images\" + charData[0] + "_256.jpg"); //Char ID
+                }
+                catch
+                {
+                    pictureBox3.Load("http://image.eveonline.com/Character/" + charData[0] + "_256.jpg"); //Char ID
+                    pictureBox3.Image.Save(ECM_cache + @"images\" + charData[0] + "_256.jpg");  //Char ID
+                }
+                timer1.Enabled = true;
+                docpn(selectChar);
             }
-            catch
-            {
-                pictureBox3.Load("http://image.eveonline.com/Character/" + charData[0] + "_256.jpg"); //Char ID
-                pictureBox3.Image.Save(ECM_cache + @"images\" + charData[0] + "_256.jpg");  //Char ID
-            }
-            timer1.Enabled = true;
-            docpn();
+            catch { }
         }
 
 
@@ -409,46 +417,7 @@ namespace ECM
         */
 
 
-        //Character Corporation and Alliance Name
-        private void docpn()
-        {
-            string ECM_cache = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\AppData\Local\EVECM\");
-            string ECMDBlocation = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\AppData\Local\EVECM\db\EVECM.db");
-            string corpID = "";
-            string member = Convert.ToString(listBox1.SelectedItem).Trim();
-            string sql = "SELECT CorpID from CharacterInfo Where Name like '" + member + "'";
-
-            SQLiteConnection ECMDB = new SQLiteConnection("Data Source=" + ECMDBlocation);
-            SQLiteCommand cmd = new SQLiteCommand(sql, ECMDB);
-            ECMDB.Open();
-            SQLiteDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                corpID = Convert.ToString(reader["CorpID"]);
-            }
-            reader.Close();
-            sql = "SELECT CorpName, AllianceName From CorporationInfo Where CorpID = " + corpID;
-            cmd = new SQLiteCommand(sql, ECMDB);
-            reader = cmd.ExecuteReader();
-            string corpName = "", allianceName = "";
-            while (reader.Read())
-            {
-                corpName = Convert.ToString(reader["CorpName"]);
-                allianceName = Convert.ToString(reader["AllianceName"]);
-            }
-            reader.Close();
-            label1.Text = corpName; //aa.CSheet(API, KEY, USER).CorporationName;
-            try
-            {
-                pictureBox2.Load(ECM_cache + @"images\" + corpID + "_256.jpg");
-            }
-            catch
-            {
-                pictureBox2.Load("http://image.eveonline.com/Corporation/" + corpID + "_256.png");
-                pictureBox2.Image.Save(ECM_cache + @"images\" + corpID + "_256.jpg");
-            }
-            label2.Text = allianceName; 
-        }
+       
 
         #endregion
 
@@ -506,6 +475,24 @@ namespace ECM
                 {
                      MessageBox.Show(Convert.ToString(ex));
                 }
+            }
+        }
+
+        //Character Corporation and Alliance Name
+        private void docpn(string selectedChar)
+        {
+            string ECM_cache = Environment.ExpandEnvironmentVariables(@"%USERPROFILE%\AppData\Local\EVECM\");
+            string[] corpData = worker.doCPN(selectedChar);
+            label1.Text = corpData[1]; 
+            label2.Text = corpData[2];
+            try
+            {
+                pictureBox2.Load(ECM_cache + @"images\" + corpData[0] + "_256.jpg");
+            }
+            catch
+            {
+                pictureBox2.Load("http://image.eveonline.com/Corporation/" + corpData[0] + "_256.png");
+                pictureBox2.Image.Save(ECM_cache + @"images\" + corpData[0] + "_256.jpg");
             }
         }
 

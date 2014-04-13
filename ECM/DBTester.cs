@@ -10,6 +10,7 @@ using System.Data.SQLite;
 using System.Text.RegularExpressions;
 using EveAI.Live.Corporation;
 using EveAI.Live.Character;
+using EveAI.Production;
 using EveAI.Live;
 
 namespace ECM
@@ -38,6 +39,13 @@ namespace ECM
         private void button1_Click(object sender, EventArgs e)
         {
             CorpInitializer();
+
+            AuthenticationData auth = new AuthenticationData();
+            auth.KeyID = CORP_KEY;
+            auth.VCode = CORP_API;
+            auth.CharacterID = CORP_USER;
+            
+            //AssemblyLineType
         }
         #region OHHH GOD THE DB WORK
 
